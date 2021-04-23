@@ -26,12 +26,6 @@ const Cart = props => {
     const removeItem = (childDescription, quantity, price) => {
         let cart = JSON.parse(localStorage.getItem('hankShoppingCart'));
         let desiredIndex;
-        // items.find( (el, index) => {
-        //     if(childDescription == el.description) {
-        //         desiredIndex = index;
-        //     }
-        // })
-        // items.splice(desiredIndex, 1);
 
         cart.find( (el, index) => {
             if(childDescription == el.description) {

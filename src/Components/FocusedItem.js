@@ -41,7 +41,9 @@ const FocusedItem = (props) => {
             if(el.description == props.match.params.id) {
                 setPrice(el.price);
                 let finalString = el.url.substring(1);
+                finalString = "/shopping-cart" + finalString;
                 setImgURL(finalString);
+                // setImgURL(el.url);
                 setCatIndex(index);
             }
         })

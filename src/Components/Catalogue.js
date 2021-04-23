@@ -13,7 +13,7 @@ const Catalogue = props => {
                     items.map((el, index) => {
                            return (
                                 <Link to={`/catalogue/${el.description}`}>
-                                    <Card description={el.description} price={el.price} url={el.url} key={index}></Card>
+                                    <Card description={el.description} points={el.points} price={el.price} url={el.url} key={index}></Card>
                                 </Link>
                            )
                     }) 
@@ -31,7 +31,17 @@ const Card = props => {
                 <div className='card-image-container'>
                     <img src={props.url} className="card-image" />
                 </div>
-                <div className='card-description'>{props.description}</div>
+                <div className='card-description'>{props.description}
+                <ul className='points'>
+                {
+                    props.points.map((point, index) => {
+                        return (
+                            <li className="point-item">{point}</li>
+                        )
+                    })
+                }
+                </ul>
+                </div>
                 <div className="card-description card-price">{props.price}</div>
             </div>
         </div>

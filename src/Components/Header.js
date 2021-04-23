@@ -20,7 +20,7 @@ const Header = props => {
                 
                 <Link to='/cart'>
                 <div className="bag-image-container">
-                    <img src="/images/bag2.png" className="bag-image" />
+                    <img src="./images/bag2.png" className="bag-image" />
                     <span className='item-count'>{props.bagCount}</span>
                 </div>
                 </Link>

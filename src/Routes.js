@@ -37,7 +37,7 @@ const Routes = () => {
     }
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header bagCount={bagCount} />
             <Switch>
                 <Route exact path='/' component={Homepage} />
